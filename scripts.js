@@ -1,8 +1,8 @@
 const container = document.querySelector(".custom-container");
 let pages = container.children;
 const pageIndicators = document.querySelectorAll(".page-indicator div");
-console.log(pages);
-console.log(pageIndicators);
+// console.log(pages);
+// console.log(pageIndicators);
 
 function elementInViewport(element) {
 

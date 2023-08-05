@@ -149,7 +149,6 @@ nav-item:before {
 }
 
 
-
 section {
     height: 100vh;
     display: flex;
@@ -157,6 +156,14 @@ section {
     align-items: center;
     color: white;
     scroll-snap-align: start;
+}
+
+
+canvas.dots {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .custom-container {
@@ -218,23 +225,25 @@ section {
 
 /* change transition duration to control the speed of fade effect */
 .carousel-item {
-    transition: transform 3.2s ease-in-out;
+    transition: transform 1.6s ease-in-out;
   }
   
-  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-start {
+    transition: opacity 1s 0.2s;
+  }
+
   .carousel-fade .active.carousel-item-end {
-    transition: opacity 1s 3.2s;
+    transition: opacity 0.5s 0.2s;
   }
 
 .carousel-div {
     width: 100vw;
     height: 100vh;
-    /* background-color: #333; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 5em;
-    font-family: Snell Roundhand, cursive;
+    font-family: Snell Roundhand, URW Chancery L, Apple Chancery, cursive;
 }
 
 
