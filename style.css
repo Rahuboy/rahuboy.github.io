@@ -159,7 +159,7 @@ section {
     scroll-snap-align: start;
 }
 
-.container {
+.custom-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     scroll-snap-stop: always;
@@ -216,6 +216,26 @@ section {
     background: transparent;
 }
 
+/* change transition duration to control the speed of fade effect */
+.carousel-item {
+    transition: transform 3.2s ease-in-out;
+  }
+  
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: opacity 1s 3.2s;
+  }
+
+.carousel-div {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #333; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-family: Snell Roundhand, cursive;
+}
 
 
 .inner-container { position: relative; height: 100%;}
@@ -226,7 +246,7 @@ section {
     height: 100px;
     position: absolute;
     top: 85%;
-    left: -5vw;
+    left: -50vw;
     transform: translate(-50%, -50%) rotateZ(0deg);
     z-index: 1;
   }
@@ -237,10 +257,10 @@ section {
     top: 50%;
   }
   .arrow-container:hover .arrow:before {
-    transform: translate(-50%, -50%) rotateZ(-30deg);
+    transform: translate(-50%, -50%) rotateZ(-45deg);
   }
   .arrow-container:hover .arrow:after {
-    transform: translate(-50%, -50%) rotateZ(30deg);
+    transform: translate(-50%, -50%) rotateZ(45deg);
   }
   .arrow {
     position: absolute;
@@ -293,6 +313,14 @@ section {
         transform: translate(-50%, -50%) rotateZ(0deg);
         z-index: 1;
       }
+
+      .circle {
+        display: none;
+      }
+
+      .circle1 {
+        display: none;
+      }
   }
 
   @media (max-width: 850px) {
@@ -314,9 +342,17 @@ section {
         height: 100px;
         position: absolute; 
         top: 85%;
-        left: -8vw;
+        left: -50vw;
         transform: translate(-50%, -50%) rotateZ(0deg);
         z-index: 1;
+      }
+
+      .circle {
+        display: none;
+      }
+
+      .circle1 {
+        display: none;
       }
 }
 
@@ -364,6 +400,10 @@ section {
         display: none;
     }
 
+    .carousel-div {
+        font-size: 1.75em;
+    }
+
 
     .arrow-container {
         display: block;
@@ -371,8 +411,16 @@ section {
         height: 60px;
         position: absolute;
         top: 85%;
-        left: -10vw;
+        left: -50vw;
         transform: translate(-50%, -50%) rotateZ(0deg);
         z-index: 1;
+      }
+
+      .circle {
+        display: none;
+      }
+
+      .circle1 {
+        display: none;
       }
 }
