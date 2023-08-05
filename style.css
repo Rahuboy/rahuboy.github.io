@@ -159,12 +159,12 @@ section {
 }
 
 
-canvas.dots {
+/* canvas.dots {
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-}
+} */
 
 .custom-container {
     scroll-snap-type: y mandatory;
