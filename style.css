@@ -148,6 +148,46 @@ nav-item:before {
     border-radius: 8px 8px 0 0;
 }
 
+/* Credit: https://codepen.io/Umer_Farooq/pen/eYJgKGN */
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #eae7dc;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  /* position: relative; */
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #7B3F00;}
+
+.fa-sun {color: #7B3F00;}
+
+.checkbox-label .ball {
+  background-color: #7B3F00;
+  width: 22px;
+  height: 22px;
+  position: fixed;
+  /* left: 2px;
+  top: 2px; */
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(90%);
+}
+
+
 
 section {
     height: 100vh;
@@ -225,7 +265,7 @@ section {
 
 /* change transition duration to control the speed of fade effect */
 .carousel-item {
-    transition: transform 1.6s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   
   .carousel-fade .active.carousel-item-start {
@@ -245,7 +285,6 @@ section {
     font-size: 5em;
     font-family: Snell Roundhand, URW Chancery L, Apple Chancery, cursive;
 }
-
 
 .inner-container { position: relative; height: 100%;}
 
