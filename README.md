@@ -1,2 +1,1 @@
-# Rahuboy.github.io
-Personal Website
+This is the source code to my public academic website. The theme was taken from https://jonbarron.info/. 

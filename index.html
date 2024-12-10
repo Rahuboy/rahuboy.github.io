@@ -1,133 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="stars.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <title>Rahul Ramachandran</title>
+
+    <meta name="author" content="Jon Barron" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
   </head>
 
   <body>
-    <div class="page-indicator">
-      <a href="#one"><div class="circle1 one"></div></a>
-      <a href="#two"><div class="circle1 two"></div></a>
-      <a href="#three"><div class="circle1 three"></div></a>
-      <a href="#four"><div class="circle1 four"></div></a>
-      <a href="#five"><div class="circle1 five"></div></a>
-      <a href="#six"><div class="circle1 six"></div></a>
-    </div>
+    <table
+      style="
+        width: 100%;
+        max-width: 800px;
+        border: 0px;
+        border-spacing: 0px;
+        border-collapse: separate;
+        margin-right: auto;
+        margin-left: auto;
+      "
+    >
+      <tbody>
+        <tr style="padding: 0px">
+          <td style="padding: 0px">
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr style="padding: 0px">
+                  <td style="padding: 2.5%; width: 63%; vertical-align: middle">
+                    <p class="name" style="text-align: center">
+                      Rahul Ramachandran
+                    </p>
+                    <p>
+                      I'm a senior year student at
+                      <a href="https://www.iith.ac.in/" target="_blank"
+                        >IIT Hyderabad</a
+                      >
+                      passionate about computer science and deep learning.
+                    </p>
+                    <p>
+                      During my undergrad, I've had the privelege of working
+                      with
+                      <a
+                        href="https://www.iith.ac.in/cse/vineethnb/"
+                        target="_blank"
+                        >Prof. Vineeth N Balasubramanian</a
+                      >
+                      at IIT Hyderabad and with
+                      <a href="https://vilab.epfl.ch/zamir/" target="_blank"
+                        >Prof. Amir Zamir</a
+                      >
+                      at
+                      <a href="https://www.epfl.ch/en/" target="_blank">EPFL</a
+                      >.
+                    </p>
+                    <p style="text-align: center">
+                      <a href="mailto:rahulramach3000@gmail.com">Email</a>
+                      &nbsp;/&nbsp; <a>CV</a> &nbsp;/&nbsp;
+                      <a
+                        href="https://scholar.google.com/citations?user=uRUnZOIAAAAJ&hl=en"
+                        target="_blank"
+                        >Scholar</a
+                      >
+                      &nbsp;/&nbsp;
+                      <a href="https://github.com/Rahuboy/" target="_blank"
+                        >Github</a
+                      >
+                    </p>
+                  </td>
+                  <td style="padding: 2.5%; width: 37%; max-width: 37%">
+                    <a
+                      href="images/profile-rahul-ramachandran.jpg"
+                      target="_blank"
+                      ><img
+                        style="
+                          width: 100%;
+                          max-width: 100%;
+                          object-fit: cover;
+                          border-radius: 50%;
+                        "
+                        alt="profile photo"
+                        src="images/profile-rahul-ramachandran.jpg"
+                        class="hoverZoomLink"
+                    /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-    <section class="top-nav">
-      <div class="logo">Rahul R</div>
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
-      </label>
-      <ul class="menu">
-        <li>
-          <a href="#one" class="nav-item is-active" active-color="#e2e2e2"
-            >Home</a
-          >
-        </li>
-        <li>
-          <a href="#two" class="nav-item" active-color="#e2e2e2">About</a>
-        </li>
-        <li>
-          <a href="#three" class="nav-item" active-color="#e2e2e2">Page3</a>
-        </li>
-        <li>
-          <a href="#four" class="nav-item" active-color="#e2e2e2">Page4</a>
-        </li>
-        <li>
-          <a href="#five" class="nav-item" active-color="#e2e2e2">Page5</a>
-        </li>
-        <li>
-          <a href="#six" class="nav-item" active-color="#e2e2e2">Page6</a>
-        </li>
-        <li>
-          <input type="checkbox" class="checkbox" id="checkbox" />
-          <label for="checkbox" class="checkbox-label">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <span class="ball"></span>
-          </label>
-        </li>
-      </ul>
-      <span class="nav-indicator"></span>
-    </section>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="padding: 16px; width: 100%; vertical-align: middle"
+                  >
+                    <h2>Education</h2>
+                    <p><span class="highlight"></span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-    <div class="custom-container">
-      <section class="one" id="one">
-        <!-- <h1>First Page</h1> -->
-        <div class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="carousel-div">print('Hello World, I'm Rahul!')</div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-div">printf("Hello, I'm Rahul!");</div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-div">cout &lt&lt "Hello, I'm Rahul!";</div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-div">console.log('Hi, I'm Rahul!')</div>
-            </div>
-            <div class="carousel-item">
-              <div class="carousel-div">System.out.println("I'm Rahul!")</div>
-            </div>
-            <div id="particles-js"></div>
-          </div>
-        </div>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="
+                      padding: 0px 20px;
+                      width: 100%;
+                      vertical-align: middle;
+                    "
+                  >
+                    <p>
+                      <strong>
+                        B.Tech. in Computer Science, 2025 (Expected)</strong
+                      >
+                      <br />
+                      <a href="https://www.iith.ac.in/" target="_blank">
+                        <papertitle>IIT Hyderabad</papertitle>
+                      </a>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-        <div class="inner-container">
-          <a href="#two" class="arrow-container">
-            <div class="arrow"></div>
-            <div class="arrow"></div>
-            <div class="arrow"></div>
-          </a>
-        </div>
-      </section>
-      <section class="two" id="two">
-        <h1>Second Page</h1>
-      </section>
-      <section class="three" id="three">
-        <h1>Third Page</h1>
-      </section>
-      <section class="four" id="four">
-        <h1>Fourth Page</h1>
-      </section>
-      <section class="five" id="five">
-        <h1>Fifth Page</h1>
-      </section>
-      <section class="six" id="six">
-        <h1>Sixth Page</h1>
-      </section>
-    </div>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td
+                    style="padding: 16px; width: 100%; vertical-align: middle"
+                  >
+                    <h2>Research</h2>
+                    <p><span class="highlight"></span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 16px; width: 20%; vertical-align: middle">
+                    <img
+                      src="images/paper-irt.png"
+                      alt="clean-usnob"
+                      width="160"
+                      height="160"
+                    />
+                  </td>
+                  <td style="padding: 8px; width: 80%; vertical-align: middle">
+                    <a
+                      href="https://www.arxiv.org/pdf/2409.04041"
+                      target="_blank"
+                    >
+                      <span class="papertitle"
+                        >On Evaluation of Vision Datasets and Models using Human
+                        Competency Frameworks</span
+                      >
+                    </a>
+                    <br />
+                    <strong>Rahul Ramachandran</strong>, <a>Tejal Kulkarni</a>,
+                    <a>Charchit Sharma</a>, <a>Deepak Vijaykeerthy</a>,
+                    <a>Vineeth N Balasubramanian</a>
+                    <br />
+                    <em>DMLR@ICML</em>, 2024
+                    <br />
+                    <a
+                      href="https://www.arxiv.org/abs/2409.04041"
+                      target="_blank"
+                      >arXiv</a
+                    >
+                    <p></p>
 
-    <script src="scripts.js"></script>
-    <script src="stars.js"></script>
+                    <p>
+                      We use Item Response Theory (IRT) to assess model
+                      calibration, select informative data subsets, and
+                      demonstrate the usefulness of various latent parameters
+                      for analyzing and comparing models and datasets in
+                      computer vision.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table
+              style="
+                width: 100%;
+                border: 0px;
+                border-spacing: 0px;
+                border-collapse: separate;
+                margin-right: auto;
+                margin-left: auto;
+              "
+            >
+              <tbody>
+                <tr>
+                  <td style="padding: 0px">
+                    <br />
+                    <p style="text-align: right; font-size: small">
+                      Stolen from Jon Barron's
+                      <a href="https://github.com/jonbarron/jonbarron_website"
+                        >source code</a
+                      >.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
