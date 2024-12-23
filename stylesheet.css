@@ -1,3 +1,60 @@
+body {
+  margin: 0;
+  padding-top: 60px;
+  /* Adjust this value to match the height of the navbar */
+  font-size: 14px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0000ee;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -70,7 +127,7 @@ a {
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #0000ee;
   text-decoration: none;
 }
 
@@ -139,4 +196,81 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #d3d3d3;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode a:hover {
+  color: #9400D3;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  border-bottom-color: #333333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Toggle switch styles */
+.dark-mode-toggle {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin-left: 0px;
+}
+
+.dark-mode-toggle input {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 1s ease;
+}
+
+input:checked+.toggle-label {
+  background-color: #9400D3;
+}
+
+input:checked+.toggle-label::after {
+  transform: translateX(20px);
+}
+
+/* Smooth transition for background and text colors */
+body {
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.navbar {
+  transition: background-color 1s ease, color 1s ease;
+}
+
+a {
+  transition: color 1s ease;
 }
