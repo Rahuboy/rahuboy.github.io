@@ -14,6 +14,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
 
   <body>
@@ -31,6 +32,11 @@
             </div>
           </li>
         </ul>
+        <div class="nav-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
     </nav>
     <table
@@ -72,9 +78,18 @@
               <tbody>
                 <tr style="padding: 0px">
                   <td style="padding: 2.5%; width: 63%; vertical-align: middle">
+
                     <p class="name" style="text-align: center">
-                      Rahul Ramachandran
+                      <span class="name-part" id="first-name" role="button" tabindex="0">
+                        Rahul
+                        <span class="tooltip">/ɹɑːhuːl/ <i class="fas fa-volume-up"></i></span> 
+                      </span>
+                      <span class="name-part" id="last-name" role="button" tabindex="0">
+                        Ramachandran
+                        <span class="tooltip">/ɹɑːmɜːtʃʌnðɹʌn/ <i class="fas fa-volume-up"></i></span> 
+                      </span>
                     </p>
+
                     <p>
                       I'm a senior year student at
                       <a href="https://www.iith.ac.in/">IIT Hyderabad</a>
@@ -281,6 +296,13 @@
     </table>
 
     <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+      });
+
       const darkModeSwitch = document.getElementById('dark-mode-switch');
       const body = document.body;
 
@@ -297,6 +319,21 @@
           body.classList.remove('dark-mode');
           localStorage.setItem('darkMode', 'disabled');
         }
+      });
+
+      const nameParts = document.querySelectorAll('.name-part');
+
+      const audioFiles = {
+        'first-name': new Audio('data/first-name.mp3'),
+        'last-name': new Audio('data/last-name.mp3')
+      };
+
+      nameParts.forEach(part => {
+        part.addEventListener('click', () => {
+          const audio = audioFiles[part.id]; 
+          audio.currentTime = 0; 
+          audio.play();
+        });
       });
     </script>
   </body>
