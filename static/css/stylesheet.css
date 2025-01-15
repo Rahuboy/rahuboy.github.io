@@ -31,6 +31,10 @@ body {
   text-decoration: none;
 }
 
+.nav-empty-div{
+  width: 300px;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -62,6 +66,10 @@ body {
 
   .nav-logo,
   .dark-mode-toggle {
+    display: none;
+  }
+
+  .nav-empty-div {
     display: none;
   }
 

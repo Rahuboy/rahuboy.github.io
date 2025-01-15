@@ -10,331 +10,353 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="shortcut icon"
-      href="images/favicon/favicon.ico"
+      href="static/images/favicon/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/stylesheet.css" />
+    <link rel="stylesheet" href="static/css/stars.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
 
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo" target="_self">Rahul Ramachandran</a>
-        <ul class="nav-links">
-          <li><a href="#about" target="_self">About</a></li>
-          <li><a href="#education" target="_self">Education</a></li>
-          <li><a href="#research" target="_self">Research</a></li>
-          <li>
-            <div class="dark-mode-toggle">
-              <input type="checkbox" id="dark-mode-switch" />
-              <label for="dark-mode-switch" class="toggle-label"></label>
-            </div>
-          </li>
-        </ul>
-        <div class="nav-toggle">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
+  <div>
+    <div id="particles-js"></div>
+    <div class="content-wrapper"></div>
+      <nav class="navbar">
+        <div class="nav-container">
+          <a href="#" class="nav-logo" target="_self">Rahul Ramachandran</a>
+          <div class="nav-empty-div"></div>
+          <ul class="nav-links">
+            <li><a href="#about" target="_self">About</a></li>
+            <li><a href="#education" target="_self">Education</a></li>
+            <li><a href="#research" target="_self">Research</a></li>
+            <li>
+              <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-switch" />
+                <label for="dark-mode-switch" class="toggle-label"></label>
+              </div>
+            </li>
+          </ul>
+          <div class="nav-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <table
-    style="
-      width: 100%;
-      max-width: 800px;
-      border: 0px;
-      border-spacing: 0px;
-      border-collapse: separate;
-      margin-right: auto;
-      margin-left: auto;
-    "
-    >
-    <table
-      style="
-        width: 100%;
-        max-width: 800px;
-        border: 0px;
-        border-spacing: 0px;
-        border-collapse: separate;
-        margin-right: auto;
-        margin-left: auto;
-      "
-      id="about"
-    >
-      <tbody>
-        <tr style="padding: 0px">
-          <td style="padding: 0px">
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr style="padding: 0px">
-                  <td style="padding: 2.5%; width: 63%; vertical-align: middle">
+      </nav>
+        <table
+          style="
+            width: 100%;
+            max-width: 800px;
+            border: 0px;
+            border-spacing: 0px;
+            border-collapse: separate;
+            margin-right: auto;
+            margin-left: auto;
+          "
+          id="about"
+        >
+          <tbody>
+            <tr style="padding: 0px">
+              <td style="padding: 0px">
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                >
+                  <tbody>
+                    <tr style="padding: 0px">
+                      <td
+                        style="padding: 2.5%; width: 63%; vertical-align: middle"
+                      >
+                        <p class="name" style="text-align: center">
+                          <span
+                            class="name-part"
+                            id="first-name"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Rahul
+                            <span class="tooltip"
+                              >/ɹɑːhuːl/ <i class="fas fa-volume-up"></i
+                            ></span>
+                          </span>
+                          <span
+                            class="name-part"
+                            id="last-name"
+                            role="button"
+                            tabindex="0"
+                          >
+                            Ramachandran
+                            <span class="tooltip"
+                              >/ɹɑːmʌtʃʌnðɹʌn/ <i class="fas fa-volume-up"></i
+                            ></span>
+                          </span>
+                        </p>
 
-                    <p class="name" style="text-align: center">
-                      <span class="name-part" id="first-name" role="button" tabindex="0">
-                        Rahul
-                        <span class="tooltip">/ɹɑːhuːl/ <i class="fas fa-volume-up"></i></span> 
-                      </span>
-                      <span class="name-part" id="last-name" role="button" tabindex="0">
-                        Ramachandran
-                        <span class="tooltip">/ɹɑːmʌtʃʌnðɹʌn/ <i class="fas fa-volume-up"></i></span> 
-                      </span>
-                    </p>
+                        <p>
+                          I'm a senior year student at
+                          <a href="https://www.iith.ac.in/">IIT Hyderabad</a>
+                          passionate about computer science and deep learning.
+                        </p>
+                        <p>
+                          During my undergrad, I've had the privelege of working
+                          with
+                          <a href="https://www.iith.ac.in/cse/vineethnb/"
+                            >Prof. Vineeth N Balasubramanian</a
+                          >
+                          at IIT Hyderabad and with
+                          <a href="https://vilab.epfl.ch/zamir/"
+                            >Prof. Amir Zamir</a
+                          >
+                          at
+                          <a href="https://www.epfl.ch/en/">EPFL</a>.
+                        </p>
+                        <p style="text-align: center">
+                          <a
+                            href="mailto:rahulramach3000@gmail.com"
+                            target="_self"
+                            >Email</a
+                          >
+                          &nbsp;/&nbsp; <a>CV</a> &nbsp;/&nbsp;
+                          <a
+                            href="https://scholar.google.com/citations?user=uRUnZOIAAAAJ&hl=en"
+                            >Scholar</a
+                          >
+                          &nbsp;/&nbsp;
+                          <a href="https://github.com/Rahuboy/">Github</a>
+                        </p>
+                      </td>
+                      <td style="padding: 2.5%; width: 37%; max-width: 37%">
+                        <a href="static/images/profile-rahul-ramachandran.jpg"
+                          ><img
+                            style="
+                              width: 100%;
+                              max-width: 100%;
+                              object-fit: cover;
+                              border-radius: 50%;
+                            "
+                            alt="profile photo"
+                            src="static/images/profile-rahul-ramachandran.jpg"
+                            class="hoverZoomLink"
+                        /></a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-                    <p>
-                      I'm a senior year student at
-                      <a href="https://www.iith.ac.in/">IIT Hyderabad</a>
-                      passionate about computer science and deep learning.
-                    </p>
-                    <p>
-                      During my undergrad, I've had the privelege of working
-                      with
-                      <a href="https://www.iith.ac.in/cse/vineethnb/"
-                        >Prof. Vineeth N Balasubramanian</a
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                  id="education"
+                >
+                  <tbody>
+                    <tr>
+                      <td
+                        style="padding: 16px; width: 100%; vertical-align: middle"
                       >
-                      at IIT Hyderabad and with
-                      <a href="https://vilab.epfl.ch/zamir/"
-                        >Prof. Amir Zamir</a
-                      >
-                      at
-                      <a href="https://www.epfl.ch/en/">EPFL</a>.
-                    </p>
-                    <p style="text-align: center">
-                      <a href="mailto:rahulramach3000@gmail.com" target="_self"
-                        >Email</a
-                      >
-                      &nbsp;/&nbsp; <a>CV</a> &nbsp;/&nbsp;
-                      <a
-                        href="https://scholar.google.com/citations?user=uRUnZOIAAAAJ&hl=en"
-                        >Scholar</a
-                      >
-                      &nbsp;/&nbsp;
-                      <a href="https://github.com/Rahuboy/">Github</a>
-                    </p>
-                  </td>
-                  <td style="padding: 2.5%; width: 37%; max-width: 37%">
-                    <a href="images/profile-rahul-ramachandran.jpg"
-                      ><img
+                        <h2>Education</h2>
+                        <p><span class="highlight"></span></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                >
+                  <tbody>
+                    <tr>
+                      <td
                         style="
+                          padding: 0px 20px;
                           width: 100%;
-                          max-width: 100%;
-                          object-fit: cover;
-                          border-radius: 50%;
+                          vertical-align: middle;
                         "
-                        alt="profile photo"
-                        src="images/profile-rahul-ramachandran.jpg"
-                        class="hoverZoomLink"
-                    /></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-              id="education"
-            >
-              <tbody>
-                <tr>
-                  <td
-                    style="padding: 16px; width: 100%; vertical-align: middle"
-                  >
-                    <h2>Education</h2>
-                    <p><span class="highlight"></span></p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr>
-                  <td
-                    style="
-                      padding: 0px 20px;
-                      width: 100%;
-                      vertical-align: middle;
-                    "
-                  >
-                    <p>
-                      <strong>
-                        B.Tech. in Computer Science, 2025 (Expected)</strong
                       >
-                      <br />
-                      <a href="https://www.iith.ac.in/">
-                        <papertitle>IIT Hyderabad</papertitle>
-                      </a>
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                        <p>
+                          <strong>
+                            B.Tech. in Computer Science, 2025 (Expected)</strong
+                          >
+                          <br />
+                          <a href="https://www.iith.ac.in/">
+                            <papertitle>IIT Hyderabad</papertitle>
+                          </a>
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-              id="research"
-            >
-              <tbody>
-                <tr>
-                  <td
-                    style="padding: 16px; width: 100%; vertical-align: middle"
-                  >
-                    <h2>Research</h2>
-                    <p><span class="highlight"></span></p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr>
-                  <td style="padding: 16px; width: 20%; vertical-align: middle">
-                    <img
-                      src="images/paper-irt.png"
-                      alt="clean-usnob"
-                      width="160"
-                      height="160"
-                    />
-                  </td>
-                  <td style="padding: 8px; width: 80%; vertical-align: middle">
-                    <a href="https://www.arxiv.org/pdf/2409.04041">
-                      <span class="papertitle"
-                        >On Evaluation of Vision Datasets and Models using Human
-                        Competency Frameworks</span
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                  id="research"
+                >
+                  <tbody>
+                    <tr>
+                      <td
+                        style="padding: 16px; width: 100%; vertical-align: middle"
                       >
-                    </a>
-                    <br />
-                    <strong>Rahul Ramachandran</strong>, <a>Tejal Kulkarni</a>,
-                    <a>Charchit Sharma</a>, <a>Deepak Vijaykeerthy</a>,
-                    <a>Vineeth N Balasubramanian</a>
-                    <br />
-                    <em>DMLR@ICML</em>, 2024
-                    <br />
-                    <a href="https://www.arxiv.org/abs/2409.04041">arXiv</a>
-                    <p></p>
+                        <h2>Research</h2>
+                        <p><span class="highlight"></span></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                >
+                  <tbody>
+                    <tr>
+                      <td
+                        style="padding: 16px; width: 20%; vertical-align: middle"
+                      >
+                        <img
+                          src="static/images/paper-irt.png"
+                          alt="clean-usnob"
+                          width="160"
+                          height="160"
+                        />
+                      </td>
+                      <td
+                        style="padding: 8px; width: 80%; vertical-align: middle"
+                      >
+                        <a href="https://www.arxiv.org/pdf/2409.04041">
+                          <span class="papertitle"
+                            >On Evaluation of Vision Datasets and Models using
+                            Human Competency Frameworks</span
+                          >
+                        </a>
+                        <br />
+                        <strong>Rahul Ramachandran</strong>,
+                        <a>Tejal Kulkarni</a>, <a>Charchit Sharma</a>,
+                        <a>Deepak Vijaykeerthy</a>,
+                        <a>Vineeth N Balasubramanian</a>
+                        <br />
+                        <em>DMLR@ICML</em>, 2024
+                        <br />
+                        <a href="https://www.arxiv.org/abs/2409.04041">arXiv</a>
+                        <p></p>
 
-                    <p>
-                      We use Item Response Theory (IRT) to assess model
-                      calibration, select informative data subsets, and
-                      demonstrate the usefulness of various latent parameters
-                      for analyzing and comparing models and datasets in
-                      computer vision.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                        <p>
+                          We use Item Response Theory (IRT) to assess model
+                          calibration, select informative data subsets, and
+                          demonstrate the usefulness of various latent parameters
+                          for analyzing and comparing models and datasets in
+                          computer vision.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr>
-                  <td style="padding: 0px">
-                    <br />
-                    <p style="text-align: right; font-size: small">
-                      Stolen from Jon Barron's
-                      <a href="https://github.com/jonbarron/jonbarron_website"
-                        >source code</a
-                      >.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+                <table
+                  style="
+                    width: 100%;
+                    border: 0px;
+                    border-spacing: 0px;
+                    border-collapse: separate;
+                    margin-right: auto;
+                    margin-left: auto;
+                  "
+                >
+                  <tbody>
+                    <tr>
+                      <td style="padding: 0px">
+                        <br />
+                        <p style="text-align: right; font-size: small">
+                          Stolen from Jon Barron's
+                          <a href="https://github.com/jonbarron/jonbarron_website"
+                            >source code</a
+                          >.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 
     <script>
-      const navToggle = document.querySelector('.nav-toggle');
-      const navLinks = document.querySelector('.nav-links');
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
 
-      navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
       });
 
-      const darkModeSwitch = document.getElementById('dark-mode-switch');
+      const darkModeSwitch = document.getElementById("dark-mode-switch");
       const body = document.body;
 
-      if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
+      if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
         darkModeSwitch.checked = true;
       }
 
-      darkModeSwitch.addEventListener('change', () => {
+      darkModeSwitch.addEventListener("change", () => {
         if (darkModeSwitch.checked) {
-          body.classList.add('dark-mode');
-          localStorage.setItem('darkMode', 'enabled');
+          body.classList.add("dark-mode");
+          localStorage.setItem("darkMode", "enabled");
         } else {
-          body.classList.remove('dark-mode');
-          localStorage.setItem('darkMode', 'disabled');
+          body.classList.remove("dark-mode");
+          localStorage.setItem("darkMode", "disabled");
         }
       });
 
-      const nameParts = document.querySelectorAll('.name-part');
+      const nameParts = document.querySelectorAll(".name-part");
 
       const audioFiles = {
-        'first-name': new Audio('data/first-name.mp3'),
-        'last-name': new Audio('data/last-name.mp3')
+        "first-name": new Audio("static/data/first-name.mp3"),
+        "last-name": new Audio("static/data/last-name.mp3"),
       };
 
-      nameParts.forEach(part => {
-        part.addEventListener('click', () => {
-          const audio = audioFiles[part.id]; 
-          audio.currentTime = 0; 
+      nameParts.forEach((part) => {
+        part.addEventListener("click", () => {
+          const audio = audioFiles[part.id];
+          audio.currentTime = 0;
           audio.play();
         });
       });
     </script>
+    <script src="static/js/stars.js"></script>
   </body>
 </html>
