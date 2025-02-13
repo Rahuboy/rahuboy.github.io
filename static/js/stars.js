@@ -70,7 +70,7 @@ particlesJS("particles-js", {
     },
   },
   interactivity: {
-    detect_on: "canvas",
+    detect_on: "window",
     events: {
       onhover: {
         enable: true,
@@ -101,7 +101,7 @@ particlesJS("particles-js", {
         duration: 0.4,
       },
       push: {
-        particles_nb: 4,
+        particles_nb: 2,
       },
       remove: {
         particles_nb: 2,
@@ -110,3 +110,15 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
+
+window.addEventListener(
+  "click",
+  (e) => {
+    // If there's any selected text, cancel the event.
+    if (window.getSelection().toString().length > 0) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+    }
+  },
+  true // 'true' makes this a capturing listener
+);

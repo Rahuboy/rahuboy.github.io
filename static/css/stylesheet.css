@@ -357,3 +357,39 @@ a {
   visibility: visible;
   opacity: 1;
 }
+
+/* Selection */
+
+body.dark-mode ::selection {
+  background: #9400D3;
+  /* Gentle pastel violet */
+  color: #ffffff;
+  /* Crisp white text */
+}
+
+body.dark-mode ::-moz-selection {
+  background: #A290E8;
+  color: #ffffff;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
+  /* For Safari */
+  -moz-user-select: none;
+  /* For Firefox */
+  -ms-user-select: none;
+  /* For IE/Edge */
+}
+
+#copy-icon {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
