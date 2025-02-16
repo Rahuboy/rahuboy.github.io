@@ -36,10 +36,14 @@
             <li><a href="#education" target="_self">Education</a></li>
             <li><a href="#research" target="_self">Research</a></li>
             <li>
-              <div class="dark-mode-toggle">
-                <input type="checkbox" id="dark-mode-switch" />
-                <label for="dark-mode-switch" class="toggle-label"></label>
-              </div>
+              <button
+                class="color-mode-toggle"
+                aria-label="Toggle color mode"
+                title="Toggle color mode"
+              >
+                <div class="sun"></div>
+                <div class="moon"></div>
+              </button>
             </li>
           </ul>
           <div class="nav-toggle">
@@ -317,47 +321,7 @@
         </table>
     </div>
 
-    <script>
-      const navToggle = document.querySelector(".nav-toggle");
-      const navLinks = document.querySelector(".nav-links");
-
-      navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-      });
-
-      const darkModeSwitch = document.getElementById("dark-mode-switch");
-      const body = document.body;
-
-      if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeSwitch.checked = true;
-      }
-
-      darkModeSwitch.addEventListener("change", () => {
-        if (darkModeSwitch.checked) {
-          body.classList.add("dark-mode");
-          localStorage.setItem("darkMode", "enabled");
-        } else {
-          body.classList.remove("dark-mode");
-          localStorage.setItem("darkMode", "disabled");
-        }
-      });
-
-      const nameParts = document.querySelectorAll(".name-part");
-
-      const audioFiles = {
-        "first-name": new Audio("static/data/first-name.mp3"),
-        "last-name": new Audio("static/data/last-name.mp3"),
-      };
-
-      nameParts.forEach((part) => {
-        part.addEventListener("click", () => {
-          const audio = audioFiles[part.id];
-          audio.currentTime = 0;
-          audio.play();
-        });
-      });
-    </script>
+    <script src="static/js/scripts.js"></script>
     <script src="static/js/stars.js"></script>
   </body>
 </html>
