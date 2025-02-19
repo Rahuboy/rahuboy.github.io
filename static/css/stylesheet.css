@@ -33,7 +33,7 @@ body {
 }
 
 .nav-logo {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
   color: #333;
   text-decoration: none;
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-links a {
-  font-size: 16px;
+  font-size: 16.5px;
   color: #333;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -254,20 +254,21 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h2 {
-  margin: 0;
+  margin-bottom: -10px;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
+
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
@@ -312,6 +313,22 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+.big-icon {
+  font-size: 1.5em;
+}
+
+.education-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.bullet-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+  flex-shrink: 0;
 }
 
 /** 
