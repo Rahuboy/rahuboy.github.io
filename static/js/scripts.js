@@ -61,3 +61,18 @@ navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("open");
   navLinks.classList.toggle("show"); // for showing/hiding the menu
 });
+
+
+/**
+ * Email Obfuscation (hopefully)
+ */
+function sendEmail() {
+  // Obfuscated email parts
+  const user = "rahulr12";
+  const domain = "illinois";
+  const tld = "edu";
+
+  // Construct and open mailto link
+  const email = user + "@" + domain + "." + tld;
+  window.location.href = "mailto:" + email;
+}
