@@ -23,6 +23,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="all" onload="this.media=&quot;all&quot;">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <div>
@@ -141,7 +142,7 @@
                         </p>
                       </td>
                       <td style="padding: 2.5%; width: 37%; max-width: 37%">
-                        <a href="static/images/profile-rahul-ramachandran.jpg"
+                        <a href="static/images/profile-rahul-ramachandran-sketch.jpg"
                           ><img
                             style="
                               width: 100%;
@@ -150,7 +151,7 @@
                               border-radius: 50%;
                             "
                             alt="profile photo"
-                            src="static/images/profile-rahul-ramachandran.jpg"
+                            src="static/images/profile-rahul-ramachandran-sketch.jpg"
                             class="hoverZoomLink"
                         /></a>
                       </td>
@@ -170,11 +171,15 @@
                   id="education"
                 >
                   <tbody>
+                    <!-- Education Section -->
                     <tr>
-                      <td
-                        style="padding: 16px; width: 100%; vertical-align: middle"
-                      >
-                        <h2>Education</h2>
+                      <td style="padding: 16px; width: 100%; vertical-align: middle">
+                        <div class="section-heading" id="education">
+                          <a href="#education" class="link-icon" onclick="copyLink(event, 'education')">
+                            <i class="fas fa-link"></i>
+                          </a>
+                          <h2>Education</h2>
+                        </div>
                         <p><span class="highlight"></span></p>
                       </td>
                     </tr>
@@ -229,11 +234,15 @@
                   id="research"
                 >
                   <tbody>
+                    <!-- Research Section -->
                     <tr>
-                      <td
-                        style="padding: 16px; width: 100%; vertical-align: middle"
-                      >
-                        <h2>Research</h2>
+                      <td style="padding: 16px; width: 100%; vertical-align: middle">
+                        <div class="section-heading" id="research">
+                          <a href="#research" class="link-icon" onclick="copyLink(event, 'research')">
+                            <i class="fas fa-link"></i>
+                          </a>
+                          <h2>Research</h2>
+                        </div>
                         <p><span class="highlight"></span></p>
                       </td>
                     </tr>
@@ -259,6 +268,7 @@
                           alt="clean-usnob"
                           width="160"
                           height="160"
+                          class="research-image"
                         />
                       </td>
                       <td

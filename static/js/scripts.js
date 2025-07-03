@@ -76,3 +76,73 @@ function sendEmail() {
   const email = user + "@" + domain + "." + tld;
   window.location.href = "mailto:" + email;
 }
+
+/**
+ * Section toast
+ */
+
+// Function to copy section link to clipboard
+function copyLink(event, sectionId) {
+  event.preventDefault();
+
+  // Create the full URL with anchor
+  const url =
+    window.location.origin + window.location.pathname + "#" + sectionId;
+
+  // Copy to clipboard
+  navigator.clipboard
+    .writeText(url)
+    .then(function () {
+      // Show success toast
+      showToast("Link copied to clipboard!");
+    })
+    .catch(function () {
+      // Fallback for older browsers
+      const tempInput = document.createElement("input");
+      tempInput.value = url;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      showToast("Link copied to clipboard!");
+    });
+}
+
+// Function to show toast notification
+function showToast(message) {
+  // Remove existing toast if any
+  const existingToast = document.querySelector(".copy-toast");
+  if (existingToast) {
+    existingToast.remove();
+  }
+
+  // Create new toast
+  const toast = document.createElement("div");
+  toast.className = "copy-toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  // Show toast
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  // Hide toast after 2 seconds
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => {
+      toast.remove();
+    }, 300);
+  }, 2000);
+}
+
+// Make entire heading clickable
+document.addEventListener("DOMContentLoaded", function () {
+  const headings = document.querySelectorAll(".section-heading h2");
+  headings.forEach((heading) => {
+    heading.addEventListener("click", function () {
+      const sectionId = this.parentElement.id;
+      copyLink(event, sectionId);
+    });
+  });
+});
