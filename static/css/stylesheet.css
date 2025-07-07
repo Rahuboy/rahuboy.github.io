@@ -356,7 +356,7 @@ span.highlight {
 .education-item {
   display: flex;
   align-items: baseline;
-  margin-bottom: 16px;
+  margin-bottom: -10px;
 }
 
 .bullet-icon {
