@@ -572,8 +572,12 @@ img {
   /* For IE/Edge */
 }
 
-.research-image {
+.research-media {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
   border-radius: 12px;
+  transition: opacity 0.3s ease;
 }
 
 

@@ -62,7 +62,6 @@ navToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show"); // for showing/hiding the menu
 });
 
-
 /**
  * Email Obfuscation (hopefully)
  */
@@ -146,3 +145,96 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/**
+ * Hovering for image -> video
+ */
+function initializeMediaHover() {
+  // Select all images that should turn into videos on hover
+  const mediaImages = document.querySelectorAll(".research-media[data-video]");
+
+  mediaImages.forEach((img) => {
+    const videoSrc = img.dataset.video;
+    const container = img.parentElement;
+
+    // 'unchecked': The initial state.
+    // 'exists': The video was found.
+    // 'missing': The video returned an error (e.g., 404).
+    let videoStatus = "unchecked";
+    let videoElement = null;
+
+    // This function creates and plays the video once it's confirmed to exist.
+    const playVideo = () => {
+      // Create the video element only on the first successful hover
+      if (!videoElement) {
+        videoElement = document.createElement("video");
+        videoElement.src = videoSrc;
+        videoElement.className = img.className;
+        videoElement.alt = img.alt;
+        videoElement.muted = true;
+        videoElement.loop = true;
+        videoElement.playsInline = true;
+        videoElement.style.display = "none";
+        container.appendChild(videoElement);
+      }
+
+      // Swap visibility and play
+      img.style.display = "none";
+      videoElement.style.display = "block";
+      videoElement.play().catch(() => {});
+    };
+
+    // When the mouse enters the container
+    container.addEventListener("mouseenter", async () => {
+      // If we already confirmed the video exists, just play it.
+      if (videoStatus === "exists") {
+        playVideo();
+        return;
+      }
+
+      // If we already know the video is missing, do nothing.
+      if (videoStatus === "missing") {
+        return;
+      }
+
+      // First hover: Check if the video file is accessible.
+      try {
+        // We use a 'HEAD' request because we only need the status,
+        // not the whole video file. This is much faster.
+        const response = await fetch(videoSrc, { method: "HEAD" });
+
+        if (response.ok) {
+          // The video exists.
+          videoStatus = "exists";
+          playVideo();
+        } else {
+          // The video returned an error (e.g., 404 Not Found).
+          videoStatus = "missing";
+          console.warn(
+            `Video not found: ${videoSrc}. Status: ${response.status}. Keeping the image.`
+          );
+        }
+      } catch (error) {
+        // A network error occurred.
+        videoStatus = "missing";
+        console.error(
+          `Network error while checking for video: ${videoSrc}`,
+          error
+        );
+      }
+    });
+
+    // When the mouse leaves the container
+    container.addEventListener("mouseleave", () => {
+      // If the video element has been created, pause and hide it.
+      if (videoElement) {
+        videoElement.pause();
+        videoElement.style.display = "none";
+        img.style.display = "block";
+      }
+    });
+  });
+}
+
+// Run the script once the page has loaded
+document.addEventListener("DOMContentLoaded", initializeMediaHover);
