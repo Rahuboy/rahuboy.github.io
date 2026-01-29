@@ -6,14 +6,17 @@ const colorModeToggle = document.querySelector(".color-mode-toggle");
 const sun = colorModeToggle.querySelector(".sun");
 const moon = colorModeToggle.querySelector(".moon");
 const body = document.body;
+const html = document.documentElement;
 
-// Set initial state based on localStorage.
+// Set initial state based on localStorage (also sync html class set in head).
 if (localStorage.getItem("darkMode") === "enabled") {
   body.classList.add("dark-mode");
+  html.classList.add("dark-mode");
   sun.classList.remove("visible");
   moon.classList.add("visible");
 } else {
   body.classList.remove("dark-mode");
+  html.classList.remove("dark-mode");
   sun.classList.add("visible");
   moon.classList.remove("visible");
 }
@@ -21,6 +24,7 @@ if (localStorage.getItem("darkMode") === "enabled") {
 // Toggle dark/light mode when the button is clicked.
 colorModeToggle.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
+  html.classList.toggle("dark-mode");
 
   if (body.classList.contains("dark-mode")) {
     localStorage.setItem("darkMode", "enabled");
@@ -211,7 +215,7 @@ function initializeMediaHover() {
           // The video returned an error (e.g., 404 Not Found).
           videoStatus = "missing";
           console.warn(
-            `Video not found: ${videoSrc}. Status: ${response.status}. Keeping the image.`
+            `Video not found: ${videoSrc}. Status: ${response.status}. Keeping the image.`,
           );
         }
       } catch (error) {
@@ -219,7 +223,7 @@ function initializeMediaHover() {
         videoStatus = "missing";
         console.error(
           `Network error while checking for video: ${videoSrc}`,
-          error
+          error,
         );
       }
     });
@@ -237,4 +241,6 @@ function initializeMediaHover() {
 }
 
 // Run the script once the page has loaded
-document.addEventListener("DOMContentLoaded", initializeMediaHover);
+document.addEventListener("DOMContentLoaded", () => {
+  initializeMediaHover();
+});

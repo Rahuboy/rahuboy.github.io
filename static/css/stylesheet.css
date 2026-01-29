@@ -7,7 +7,10 @@ body {
   margin: 0;
   padding-top: 60px;
   font-size: 14px;
-  font-family: "Lora", BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #faf9f7;
 }
 
 
@@ -21,14 +24,14 @@ p {
 
 .navbar {
   width: 100%;
-  background-color: rgba(248, 249, 250, 0.85);
+  background-color: rgba(250, 249, 247, 0.9);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e8e6e3;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   font-family: "Montserrat", BlinkMacSystemFont,
       -apple-system,
       "Segoe UI",
@@ -118,24 +121,25 @@ body.dark-mode .nav-links li a::after {
 
 /* Default (Light Mode) */
 .arxiv-button {
-  padding: 4px 8px;
+  padding: 5px 12px;
   font-size: 13px;
+  font-weight: 500;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1772d0;
-  /* Text color: Blue */
   background-color: transparent;
   border: 1px solid #1772d0;
-  /* Border: Blue */
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
   margin-top: 5px;
+  margin-right: 4px;
 }
 
 /* Light Mode Hover */
 .arxiv-button:hover {
   background-color: #1772d0;
-  /* Fill the button with the same blue */
   color: #fff;
+  transform: translateY(-1px);
 }
 
 /* Dark Mode */
@@ -188,7 +192,7 @@ body.dark-mode .arxiv-button:focus {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #f8f9fa;
+    background-color: #faf9f7;
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1001;
@@ -198,7 +202,7 @@ body.dark-mode .arxiv-button:focus {
   }
 
   .navbar {
-    background-color: rgba(248, 249, 250);
+    background-color: rgba(250, 249, 247, 0.98);
     backdrop-filter: none;
   }
 
@@ -317,36 +321,8 @@ h2 {
   font-size: 32px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
 span.highlight {
   background-color: #ffffd0;
-}
-
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
 }
 
 .big-icon {
@@ -488,15 +464,15 @@ body.dark-mode .nav-links li a::after {
 
 /* Smooth transition for background and text colors */
 body {
-  transition: background-color 1s ease, color 1s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .navbar {
-  transition: background-color 1s ease, color 1s ease;
+  transition: background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 a {
-  transition: color 1s ease;
+  transition: color 0.3s ease;
 }
 
 /** 
@@ -578,6 +554,133 @@ img {
   object-fit: cover;
   border-radius: 12px;
   transition: opacity 0.3s ease;
+}
+
+/* Research Cards */
+.research-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.research-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.research-card-image {
+  flex-shrink: 0;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.research-card-content {
+  flex: 1;
+}
+
+.research-card-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Research card description toggle */
+.research-details {
+  display: inline;
+}
+
+.research-details summary {
+  list-style: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.research-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-abstract {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s ease,
+              margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+.research-abstract > p {
+  margin: 0;
+}
+
+.abstract-toggle {
+  padding: 5px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #666;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 5px;
+  margin-right: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.abstract-toggle:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+}
+
+.abstract-toggle i {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.research-details[open] .abstract-toggle i {
+  transform: rotate(180deg);
+}
+
+body.dark-mode .abstract-toggle {
+  color: #aaa;
+  border-color: #444;
+}
+
+body.dark-mode .abstract-toggle:hover {
+  background-color: #2a2a2a;
+  border-color: #555;
+}
+
+body.dark-mode .research-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .research-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .research-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .research-card-image {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }
 
 

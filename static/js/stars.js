@@ -1,8 +1,8 @@
 /**
  * particles-js config
-*/
+ */
 
-particlesJS("particles-js", {
+const particlesConfig = {
   particles: {
     number: {
       value: 45,
@@ -111,7 +111,51 @@ particlesJS("particles-js", {
     },
   },
   retina_detect: true,
+};
+
+// Track if particles have been initialized
+let particlesInitialized = false;
+
+function initParticles() {
+  if (!particlesInitialized) {
+    particlesJS("particles-js", particlesConfig);
+    particlesInitialized = true;
+  }
+}
+
+function destroyParticles() {
+  if (particlesInitialized && window.pJSDom && window.pJSDom.length > 0) {
+    window.pJSDom[0].pJS.fn.vendors.destroypJS();
+    window.pJSDom = [];
+    particlesInitialized = false;
+  }
+}
+
+// Initialize particles if dark mode is already active
+if (
+  document.documentElement.classList.contains("dark-mode") ||
+  document.body.classList.contains("dark-mode")
+) {
+  initParticles();
+}
+
+// Listen for dark mode toggle
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.attributeName === "class") {
+      const isDarkMode =
+        document.body.classList.contains("dark-mode") ||
+        document.documentElement.classList.contains("dark-mode");
+      if (isDarkMode) {
+        initParticles();
+      } else {
+        destroyParticles();
+      }
+    }
+  });
 });
+
+observer.observe(document.body, { attributes: true });
 
 window.addEventListener(
   "click",
@@ -122,5 +166,5 @@ window.addEventListener(
       e.preventDefault();
     }
   },
-  true // 'true' makes this a capturing listener
+  true, // 'true' makes this a capturing listener
 );

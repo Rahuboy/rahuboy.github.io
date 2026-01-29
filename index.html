@@ -24,10 +24,16 @@
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" media="all" onload="this.media=&quot;all&quot;">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // Apply dark mode immediately to prevent flash and ensure particles show
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.documentElement.classList.add("dark-mode");
+      }
+    </script>
   </head>
 
-  <div>
+  <body>
     <div id="particles-js"></div>
     <div class="content-wrapper"></div>
       <nav class="navbar">
@@ -111,27 +117,22 @@
                           </span>
                         </p>
 
-                        <p>
-                          I'm a first year Ph.D. student at the University of Illinois at Urbana-Champaign
-                          advised by 
-                          <a href="https://saurabhg.web.illinois.edu/"
-                            >Prof. Saurabh Gupta</a>.
-                        </p>
-                        <p>
-                          Previously, I finished my Bachelor's in Computer Science at
-                          <a href="https://www.iith.ac.in/">IIT Hyderabad</a>.
-                          I've had the privilege of working
-                          with
-                          <a href="https://www.iith.ac.in/cse/vineethnb/"
-                            >Prof. Vineeth N Balasubramanian</a
-                          >
-                          at IITH and with
-                          <a href="https://vilab.epfl.ch/zamir/"
-                            >Prof. Amir Zamir</a
-                          >
-                          at
-                          <a href="https://www.epfl.ch/en/">EPFL</a>.
-                        </p>
+                          <p>
+                            Hi! I'm a first-year Ph.D. student at the 
+                            <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, 
+                            where I'm fortunate to be advised by 
+                            <a href="https://saurabhg.web.illinois.edu/">Prof. Saurabh Gupta</a>. 
+                            I'm excited about robot learning, and am currently interested in sim-to-real transfer for manipulation, particularly for non-prehensile tasks.
+                          </p>
+
+                          <p>
+                            Previously, I finished my Bachelor's in Computer Science at 
+                            <a href="https://www.iith.ac.in/">IIT Hyderabad</a>. 
+                            I've had the privilege of working with 
+                            <a href="https://www.iith.ac.in/cse/vineethnb/">Prof. Vineeth N Balasubramanian</a> at IITH 
+                            and with <a href="https://vilab.epfl.ch/zamir/">Prof. Amir Zamir</a> at 
+                            <a href="https://www.epfl.ch/en/">EPFL</a>.
+                          </p>
 
                         <p style="text-align: center">
                           <a href="#" onclick="sendEmail()" target="_self">
@@ -186,14 +187,13 @@
                   <tbody>
                     <!-- Education Section -->
                     <tr>
-                      <td style="padding: 16px; width: 100%; vertical-align: middle">
+                      <td style="padding: 16px 16px 4px 16px; width: 100%; vertical-align: middle">
                         <div class="section-heading" id="education">
                           <a href="#education" class="link-icon" onclick="copyLink(event, 'education')">
                             <i class="fas fa-link"></i>
                           </a>
                           <h2>Education</h2>
                         </div>
-                        <p><span class="highlight"></span></p>
                       </td>
                     </tr>
                   </tbody>
@@ -264,142 +264,80 @@
                   <tbody>
                     <!-- Research Section -->
                     <tr>
-                      <td style="padding: 16px; width: 100%; vertical-align: middle">
+                      <td style="padding: 16px 16px 4px 16px; width: 100%; vertical-align: middle">
                         <div class="section-heading" id="research">
                           <a href="#research" class="link-icon" onclick="copyLink(event, 'research')">
                             <i class="fas fa-link"></i>
                           </a>
                           <h2>Research</h2>
                         </div>
-                        <p><span class="highlight"></span></p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
 
                 <!-- FM Vision Evals Paper -->
-                <table
-                  style="
-                    width: 100%;
-                    border: 0px;
-                    border-spacing: 0px;
-                    border-collapse: separate;
-                    margin-right: auto;
-                    margin-left: auto;
-                  "
-                >
-                  <tbody>
-                    <tr>
-                      <td
-                        style="padding: 16px; width: 20%; vertical-align: middle"
-                      >
-                        <img
-                          src="static/images/paper-fm-vision-evals.png"
-                          alt="clean-usnob"
-                          class="research-media"
-                          data-video="static/images/paper-fm-vision-evals.mp4"
-                          data-image="static/images/paper-fm-vision-evals.png"
-                        />
-                      </td>
-                      <td
-                        style="padding: 8px; width: 80%; vertical-align: middle"
-                      >
-                        <a href="https://www.arxiv.org/pdf/2409.04041">
-                          <span class="papertitle"
-                            >How Well Does GPT-4o Understand Vision? Evaluating Multimodal Foundation Models on Standard Computer Vision Tasks</span
-                          >
-                        </a>
-                        <br />
-                        <strong>Rahul Ramachandran</strong>, <a href="https://garjania.github.io/">Ali Garjani</a>, <a href="https://roman-bachmann.github.io/">Roman Bachmann</a>, <a href="https://andrewatanov.github.io/">Andrei Atanov*</a>, <a href="https://ofkar.github.io/">Oğuzhan Fatih Kar*</a>, <a href="https://vilab.epfl.ch/zamir/">Amir Zamir*</a>
-                        <br/>
-                        <em>Arxiv</em>, 2025
-                        <br />
-                        <button
-                          onclick="window.open('https://arxiv.org/abs/2507.01955', '_blank')"
-                          class="arxiv-button"
-                        >
-                          arXiv
-                        </button>
-                        <button
-                          onclick="window.open('https://fm-vision-evals.epfl.ch/', '_blank')"
-                          class="arxiv-button"
-                        >
-                          website
-                        </button>
-                        <button
-                          onclick="window.open('https://github.com/EPFL-VILAB/fm-vision-evals', '_blank')"
-                          class="arxiv-button"
-                        >
-                          code
-                        </button>
-                        <p></p>
-
-                        <p>
-                        We benchmark top multimodal models like GPT-4o and Gemini on standard vision tasks using a prompt-based framework. While these models are strong generalists, especially on semantic tasks, they still trail behind specialized vision models, particularly in geometry.
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img
+                      src="static/images/paper-fm-vision-evals.png"
+                      alt="FM Vision Evals"
+                      class="research-media"
+                      data-video="static/images/paper-fm-vision-evals.mp4"
+                      data-image="static/images/paper-fm-vision-evals.png"
+                    />
+                  </div>
+                  <div class="research-card-content">
+                    <a href="https://www.arxiv.org/pdf/2409.04041">
+                      <span class="papertitle">How Well Does GPT-4o Understand Vision? Evaluating Multimodal Foundation Models on Standard Computer Vision Tasks</span>
+                    </a>
+                    <br />
+                    <strong>Rahul Ramachandran</strong>, <a href="https://garjania.github.io/">Ali Garjani</a>, <a href="https://roman-bachmann.github.io/">Roman Bachmann</a>, <a href="https://andrewatanov.github.io/">Andrei Atanov*</a>, <a href="https://ofkar.github.io/">Oğuzhan Fatih Kar*</a>, <a href="https://vilab.epfl.ch/zamir/">Amir Zamir*</a>
+                    <br/>
+                    <em>ICLR</em>, 2026
+                    <br />
+                    <button onclick="window.open('https://arxiv.org/abs/2507.01955', '_blank')" class="arxiv-button">arXiv</button>
+                    <button onclick="window.open('https://fm-vision-evals.epfl.ch/', '_blank')" class="arxiv-button">website</button>
+                    <button onclick="window.open('https://github.com/EPFL-VILAB/fm-vision-evals', '_blank')" class="arxiv-button">code</button>
+                    <details class="research-details">
+                      <summary class="abstract-toggle">description <i class="fas fa-chevron-down"></i></summary>
+                      <div class="research-abstract">
+                        <p>We benchmark top multimodal models like GPT-4o and Gemini on standard vision tasks using a prompt-based framework. While these models are strong generalists, especially on semantic tasks, they still trail behind specialized vision models, particularly in geometry.</p>
+                      </div>
+                    </details>
+                  </div>
+                </div>
 
 
                 <!-- IRT Paper -->
-                <table
-                  style="
-                    width: 100%;
-                    border: 0px;
-                    border-spacing: 0px;
-                    border-collapse: separate;
-                    margin-right: auto;
-                    margin-left: auto;
-                  "
-                >
-                  <tbody>
-                    <tr>
-                      <td
-                        style="padding: 16px; width: 20%; vertical-align: middle"
-                      >
-                        <img
-                          src="static/images/paper-irt.png"
-                          alt="clean-usnob"
-                          class="research-media"
-                          data-video="static/images/paper-irt.mp4"
-                          data-image="static/images/paper-irt.png"
-                        />
-                      </td>
-                      <td
-                        style="padding: 8px; width: 80%; vertical-align: middle"
-                      >
-                        <a href="https://www.arxiv.org/pdf/2409.04041">
-                          <span class="papertitle"
-                            >On Evaluation of Vision Datasets and Models using
-                            Human Competency Frameworks</span
-                          >
-                        </a>
-                        <br />
-                        <strong>Rahul Ramachandran</strong>, <a href="https://www.linkedin.com/in/tejal-kulkarni-087135260">Tejal Kulkarni</a>, <a href="https://charchit7.github.io/">Charchit Sharma</a>, <a href="https://research.ibm.com/people/deepak-vijaykeerthy">Deepak Vijaykeerthy</a>, <a href="https://people.iith.ac.in/vineethnb/">Vineeth N Balasubramanian</a>
-                        <br />
-                        <em>DMLR@ICML</em>, 2024
-                        <br />
-                        <button
-                          onclick="window.open('https://www.arxiv.org/abs/2409.04041', '_blank')"
-                          class="arxiv-button"
-                        >
-                          arXiv
-                        </button>
-                        <p></p>
-
-                        <p>
-                          We use Item Response Theory (IRT) to assess model
-                          calibration, select informative data subsets, and
-                          demonstrate the usefulness of various latent parameters
-                          for analyzing and comparing models and datasets in
-                          computer vision.
-                        </p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="research-card">
+                  <div class="research-card-image">
+                    <img
+                      src="static/images/paper-irt.png"
+                      alt="IRT Paper"
+                      class="research-media"
+                      data-video="static/images/paper-irt.mp4"
+                      data-image="static/images/paper-irt.png"
+                    />
+                  </div>
+                  <div class="research-card-content">
+                    <a href="https://www.arxiv.org/pdf/2409.04041">
+                      <span class="papertitle">On Evaluation of Vision Datasets and Models using Human Competency Frameworks</span>
+                    </a>
+                    <br />
+                    <strong>Rahul Ramachandran</strong>, <a href="https://www.linkedin.com/in/tejal-kulkarni-087135260">Tejal Kulkarni</a>, <a href="https://charchit7.github.io/">Charchit Sharma</a>, <a href="https://research.ibm.com/people/deepak-vijaykeerthy">Deepak Vijaykeerthy</a>, <a href="https://people.iith.ac.in/vineethnb/">Vineeth N Balasubramanian</a>
+                    <br />
+                    <em>DMLR@ICML</em>, 2024
+                    <br />
+                    <button onclick="window.open('https://www.arxiv.org/abs/2409.04041', '_blank')" class="arxiv-button">arXiv</button>
+                    <details class="research-details">
+                      <summary class="abstract-toggle">description <i class="fas fa-chevron-down"></i></summary>
+                      <div class="research-abstract">
+                        <p>We use Item Response Theory (IRT) to assess model calibration, select informative data subsets, and demonstrate the usefulness of various latent parameters for analyzing and comparing models and datasets in computer vision.</p>
+                      </div>
+                    </details>
+                  </div>
+                </div>
 
                 <table
                   style="
@@ -433,5 +371,39 @@
 
     <script src="static/js/scripts.js"></script>
     <script src="static/js/stars.js"></script>
+    <script>
+      // Smooth animation for details/summary toggle
+      document.querySelectorAll('.research-details').forEach(details => {
+        const content = details.querySelector('.research-abstract');
+        
+        details.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          if (details.open) {
+            // Closing: animate then remove open
+            content.style.maxHeight = content.scrollHeight + 'px';
+            requestAnimationFrame(() => {
+              content.style.maxHeight = '0';
+              content.style.opacity = '0';
+              content.style.marginTop = '0';
+            });
+            setTimeout(() => {
+              details.open = false;
+            }, 400);
+          } else {
+            // Opening: add open then animate
+            details.open = true;
+            content.style.maxHeight = '0';
+            content.style.opacity = '0';
+            content.style.marginTop = '0';
+            requestAnimationFrame(() => {
+              content.style.maxHeight = content.scrollHeight + 'px';
+              content.style.opacity = '1';
+              content.style.marginTop = '12px';
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
