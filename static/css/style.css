@@ -665,14 +665,8 @@ img {
   }
 
   .paper-media {
-    justify-self: start;
-  }
-
-  .paper-media img {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 170px;
+    justify-self: center;
+    width: 70%;
   }
 
   .paper-title {
